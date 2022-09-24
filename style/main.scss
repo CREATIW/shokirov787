@@ -1,0 +1,182 @@
+@import './mixins','./normalize','./variables';
+@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);;
+/* GLOBAL - STYLES - START */
+.wrapper{
+    min-height: 100%;
+    width: 100%;  
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+.container{
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 10px 20px;
+
+}
+/* GLOBAL - STYLES - END */
+/* HEADER - START */
+.header{
+    &__menu{
+        @include flex(center,space-between);
+        margin-bottom: 50px;
+    }
+    &__navbar{
+        @include flex(center, unset);
+        gap: 40px;
+    }
+    &__link{
+        font-size: 14px;
+        line-height: 186%;
+        text-transform: uppercase;
+        color: $color_black;
+       
+    }
+    &_btn{
+        padding: 10px 30px;
+        background: #0057FF;
+        border-radius: 30px;
+        border-color: transparent;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 171%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+    &__main{
+        @include flex(center, space-between);
+    }
+    &__left{
+        width: 40%;
+        &-content{
+            h1{
+                font-size: 40px;
+                line-height: 118% ;
+                text-transform: uppercase;
+                color: $color_black;
+                margin-bottom: 50px;
+            }
+        }
+        &-desc{
+            font-size: 15px;
+            line-height:  156%;
+            text-transform: uppercase;
+            color: $color_black;
+            margin-bottom: 15px;
+        }
+    }
+    &__right{
+        width: 45%;
+        img{
+            width: 100%;
+            margin-bottom: 40px;
+        }
+    }
+    &__flex{
+        @include flex(center, unset);
+        margin-bottom: 30px;
+        p{
+            font-weight: 500;
+            font-size: 15px;
+            line-height:  156%;
+            text-transform: uppercase;
+            color: $color_black;
+        }
+        .p{
+           margin-left: 20px;
+        }
+     
+    }
+    &__main-btn{
+        padding: 10px 30px;
+        background: #FFA332;
+        border-radius: 30px;
+        border-color: transparent;
+        font-size: 12px;
+        line-height: 101%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+}
+/* HEADER - END */
+/* MAIN - START */
+.section-one{
+    &_content{
+        text-align: center;
+        width: 40%;
+        margin: 0 auto;
+    }
+    &_desc{
+        font-size: 11px;
+        line-height: 200%;
+        text-align: center;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: #0057FF;
+        
+    }
+    &_title{
+        font-size: 40px;
+        line-height: 120%;
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $color_black;
+        margin-bottom: 30px;
+    }
+    &_desc2{
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        line-height: 162%;
+        text-align: center;
+        color: $color_black;
+    }
+    &-row{
+        @include flex(center,space-between);
+        flex-direction: column;
+    }
+}
+.section-two{
+    &-row{
+        @include flex(unset,space-between);
+    }
+    &-left{
+        width: 45%;
+        img{
+            width: 100%;
+        }
+    }
+    &-right{
+        width: 35%;
+        &_content{
+            h1{
+                font-size: 40px;
+                line-height: 125%;
+                font-weight: 400;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: $color_black;
+                margin-bottom: 45px;
+            }
+            p{ 
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            line-height:  173% ;
+            color: $color_black;
+            margin-bottom: 35px;
+            }
+        }
+    }
+    .cards{
+        border: 1px solid #E7E7E7;
+        border-radius: 20px;
+    }
+    .card{
+        padding: 20px 30px;
+        @include flex(center, space-between);
+    }
+}
+/* MAIN - END */
